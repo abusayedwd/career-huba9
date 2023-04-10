@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../Header/Header';
 import Jobcategory from '../JobCategory/Jobcategory';
 import Clist from '../Clist';
+import Jobfeature from '../Jobfeature';
  
 const Home = () => {
         const [jobs, setJob] = useState([]);
@@ -9,6 +10,13 @@ const Home = () => {
                 fetch('jobdata.json')
                 .then(res => res.json())
                 .then(data => setJob(data))
+        },[])
+        const [reature, setFeature] = useState([])
+
+        useEffect(() => {
+                fetch("jobfeature.json")
+                .then(res => res.json())
+                .then(data => setFeature(data))
         },[])
         return (
                 <div>
@@ -24,6 +32,7 @@ const Home = () => {
                                                 )
                                 }
                         </div>
+                        <Jobfeature></Jobfeature>
                 </div>
         );
 };
