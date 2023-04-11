@@ -12,8 +12,12 @@ const Jobdetail = () => {
         //  console.log(id)
          const details = useLoaderData()
         
-        const [detailss, setDetailss] = useState(details)
-       const detail = detailss.find(dt =>  dt.id === id );
+        const [detail, setDetailss] = useState({})
+        useEffect(()=>{
+
+                const detailss = details.find(dt =>  dt.id === id );
+                setDetailss(detailss)
+        },[])
 //        console.log(detail.name)
          
         
