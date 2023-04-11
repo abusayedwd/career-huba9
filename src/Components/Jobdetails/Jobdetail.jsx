@@ -11,9 +11,12 @@ const Jobdetail = () => {
          const {id} = useParams()
         //  console.log(id)
          const details = useLoaderData()
-        //  console.log(details)
-       const detail = details.find(dt =>  dt.id === id );
+        
+        const [detailss, setDetailss] = useState(details)
+       const detail = detailss.find(dt =>  dt.id === id );
 //        console.log(detail.name)
+         
+        
          
         
 
