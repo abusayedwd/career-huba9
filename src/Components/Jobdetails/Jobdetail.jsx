@@ -13,7 +13,7 @@ const Jobdetail = () => {
          const details = useLoaderData()
         //  console.log(details)
        const detail = details.find(dt =>  dt.id === id );
-       console.log(detail.name)
+//        console.log(detail.name)
          
         
 
@@ -28,11 +28,14 @@ const Jobdetail = () => {
                              <p className='mt-4'><span className='text-1xl font-bold'>Educatonal Requierment: </span>{detail.educational}</p>    
                              <p className='mt-4'><span className='text-1xl font-bold'>Experience: </span>{detail.experience}</p>    
               </div>
-               <div className='w-[40%] bg-orange-100 p-12'>
-                         <p className='text-center text-1xl font-mono'>Job Detail</p>
+               <div className='w-[40%] bg-orange-100 p-12 relative'>
+                         <p className='text-center text-2xl font-mono'>Job Detail</p>
+
                          <p className='mt-4'><span className='text-1xl font-bold'>slary: </span>{detail.salary} (per mounth)</p> 
                          <p className='mt-4'><span className='text-1xl font-bold'>Job Title: </span>{detail.title} </p> 
-                         <p className='text-center text-1xl mt-4 font-mono'>Contact info:</p>
+
+                         <p className='text-center text-2xl mt-4 font-mono'>Contact info:</p>
+
                          <p className='mt-4'><span className='text-1xl font-bold'>Phone: </span>
                          <FontAwesomeIcon icon={faPhone} />
                          {detail.phone} </p> 
@@ -43,6 +46,7 @@ const Jobdetail = () => {
                          <FontAwesomeIcon icon={faAddressBook } />
                           Address : Dhaka, Uttara</p> 
                          
+              <button className='bg-sky-400 w-3/5 px-4 py-1 absolute font-mono font-bold text-white mx-auto bottom-0 '>Apply Now</button>
               </div>
         </div>
                 </div>
