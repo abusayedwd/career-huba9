@@ -15,10 +15,13 @@ const Jobdetail = () => {
         const [detail, setDetailss] = useState({})
         useEffect(()=>{
 
-                const detailss = details.find(dt =>  dt.id === id );
+                if(details){
+                        const detailss = details.find(dt =>  dt.id === id );
                 setDetailss(detailss)
+                }
+                
         },[])
-//        console.log(detail.name)
+//         
          
         
          
