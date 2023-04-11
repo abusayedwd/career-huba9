@@ -3,7 +3,7 @@ import './Navbar.css'
 import { Link } from 'react-router-dom';
 const Navbar = () => {
         return (
-                <div className='flex justify-around bg-slate-50 h-20 items-center' >
+                <div className='flex justify-around bg-slate-50 h-20 items-center sticky top-0' >
                       <div><p className='text-2xl font-bold'>Job-Opportunity</p></div>
                       <div className=''>
                        

@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Jobcategory from '../JobCategory/Jobcategory';
 import Clist from '../Clist';
 import Jobfeature from '../Jobfeature';
+import Showjobfeature from '../Showjobreature/Showjobfeature';
  
 const Home = () => {
         const [jobs, setJob] = useState([]);
@@ -11,7 +12,7 @@ const Home = () => {
                 .then(res => res.json())
                 .then(data => setJob(data))
         },[])
-        const [reature, setFeature] = useState([])
+        const [features, setFeature] = useState([])
 
         useEffect(() => {
                 fetch("jobfeature.json")
@@ -22,7 +23,7 @@ const Home = () => {
                 <div>
                         <Header></Header>
                         <Clist></Clist>
-                        <div className='flex justify-center mt-5 p-5 gap-24  '>
+                        <div className='md:flex flex-1 mt-5 p-5 gap-24  '>
                                 {
                                         jobs.map(job=> 
                                         <Jobcategory
@@ -33,6 +34,16 @@ const Home = () => {
                                 }
                         </div>
                         <Jobfeature></Jobfeature>
+                        <div className='grid grid-cols-1 md:grid-cols-2 mt-12 gap-8 '>
+                       {
+                             features.map(feature => 
+                                <Showjobfeature
+                                key={feature.id}
+                                showfeature ={ feature}
+                                ></Showjobfeature>
+                                                )
+                      }
+                        </div>
                 </div>
         );
 };
