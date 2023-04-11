@@ -13,12 +13,18 @@ const Home = () => {
                 .then(data => setJob(data))
         },[])
         const [features, setFeature] = useState([])
+         
 
         useEffect(() => {
                 fetch("jobfeature.json")
                 .then(res => res.json())
-                .then(data => setFeature(data))
+                .then(data => setFeature(data.slice(0,4)))
         },[])
+        const showAllJobs = () => {
+                fetch("jobfeature.json")
+                .then(res => res.json())
+                .then(data => setFeature(data)) 
+        }
         return (
                 <div>
                         <Header></Header>
@@ -34,15 +40,19 @@ const Home = () => {
                                 }
                         </div>
                         <Jobfeature></Jobfeature>
-                        <div className='grid grid-cols-1 md:grid-cols-2 mt-12 gap-8 '>
+                        <div className='grid grid-cols-1 md:grid-cols-2  mt-12 gap-8 '>
                        {
                              features.map(feature => 
                                 <Showjobfeature
                                 key={feature.id}
                                 showfeature ={ feature}
                                 ></Showjobfeature>
-                                                )
-                      }
+     
+                                )
+                                                        }
+                  
+                                        
+                        <button onClick={showAllJobs} className='bg-sky-400 px-5 py-2 rounded-lg font-bold m-auto mb-4'>See All Job</button>
                         </div>
                 </div>
         );

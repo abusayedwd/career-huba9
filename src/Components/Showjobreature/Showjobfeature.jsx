@@ -22,6 +22,8 @@ const Showjobfeature = ({showfeature}) => {
                         <p className='mt-6 bg-blue-400 px-4 py-1 rounded-lg font-bold w-2/4'><Link to ={`/detail/${id}`}>show detail</Link></p>
 
                         
+
+                        
                 </div>
         );
 };

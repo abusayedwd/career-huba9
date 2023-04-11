@@ -12,7 +12,7 @@ const Header = () => {
                                         <button className=' mt-4 font-bold px-4 py-1 bg-sky-400 rounded-md'>Get Started</button>
                                 </div>
                                 <div>
-                                       <img className=' w-[100%]  h-96 mx-auto' src="public/image.jpg" alt="" /> 
+                                       <img className=' w-[100%]  h-96 mx-auto' src="image.jpg" alt="" /> 
                                 </div>
                         </section>
                 </div>
