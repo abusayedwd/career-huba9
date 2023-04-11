@@ -12,7 +12,7 @@ const Jobdetail = () => {
         //  console.log(id)
          const details = useLoaderData()
         
-        const [detail, setDetailss] = useState({})
+        const [detail, setDetailss] = useState([])
         useEffect(()=>{
 
                 if(details){
