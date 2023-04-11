@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import DetailInfo from '../detailInfo/DetailInfo';
+ 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faPhone, faEnvelope, faAddressBook, } from '@fortawesome/free-solid-svg-icons'
  

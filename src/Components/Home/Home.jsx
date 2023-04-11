@@ -23,7 +23,7 @@ const Home = () => {
                 <div>
                         <Header></Header>
                         <Clist></Clist>
-                        <div className='md:flex flex-1 mt-5 p-5 gap-24  '>
+                        <div className='md:flex flex-1 justify-center mt-5 p-5 gap-24'>
                                 {
                                         jobs.map(job=> 
                                         <Jobcategory
