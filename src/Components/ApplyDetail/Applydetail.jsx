@@ -13,7 +13,8 @@ const Applydetail = ({apply}) => {
        }
 
         return (
-        <div className='flex mt-5 justify-between items-center w-[65%] mx-auto gap-4 border-2'>
+                <div className='flex mt-5 justify-between items-center w-[65%] mx-auto gap-4 border-2'>
+               
                 <div className='flex justify-center items-center p-5'>
                         <div> 
                                <img className='h-32 w-32' src={img} alt="" /> 

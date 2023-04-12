@@ -21,6 +21,13 @@ const Appyed = () => {
         // console.log(empty)
         return (
                 <div className='mt-12'>
+                        <p className='text-3xl text-green-600 font-thin text-center'>Applyed Job</p>
+                         <select className='border-4 p-2 ml-60 mb-12' name='Filter by'>
+                         
+                        <option value="remote">All</option>
+                        <option value="remote">Remote</option>
+                        <option value="onsite">Onsite</option>
+                </select>
                         {
                                 empty.map(apply => 
                                      <Applydetail

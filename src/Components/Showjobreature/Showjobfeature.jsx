@@ -9,7 +9,7 @@ const Showjobfeature = ({showfeature}) => {
                 <div className='mx-auto border w-[70%] p-12'>
                     
                         <img className='h-16 rounded-lg  w-44' src={img} alt="" />
-                        <p>{title}</p>
+                        <p className='text-2xl font-bold'>{title}</p>
                         <p>{name}</p>
                         <div className='flex'>
                                 <p className='text-blue-400 border mr-4'>{remote}</p>
