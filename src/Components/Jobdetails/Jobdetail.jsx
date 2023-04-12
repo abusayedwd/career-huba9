@@ -55,10 +55,10 @@ const handleApplyed = (id) => {
                          <FontAwesomeIcon icon={faAddressBook } />
                           Address : Dhaka, Uttara</p> 
                          
-                   <Link to = "/appyed">
+                   
                         
-              <button onClick={()=>handleApplyed(id)} className='bg-sky-400 w-3/5 px-auto py-1 absolute font-mono font-bold text-white mx-auto bottom-0 '>Apply Now</button>
-                   </Link>      
+              <button onClick={()=>handleApplyed(id)} className='bg-sky-400 w-3/5 px-auto py-1 hover:bg-green-500 rounded-lg absolute font-mono font-bold text-white mx-auto bottom-0 '>Apply Now</button>
+                       
               </div>
         </div>
                 </div>
