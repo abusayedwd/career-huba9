@@ -12,7 +12,7 @@ import Statistics from './Components/Statistics/Statistics';
 import Appyed from './Components/AppyedJob/Appyed';
 import Blog from './Components/Blogs/Blog';
 import Jobdetail from './Components/Jobdetails/Jobdetail';
-import JobDetaildata from './Jobdetail';
+ 
 const router = createBrowserRouter([
   {
     path:'/',

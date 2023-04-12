@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
   import { faPhone, faEnvelope, faAddressBook, } from '@fortawesome/free-solid-svg-icons'
+import { addToDb } from '../utilies/jakeDb';
  
  
  
@@ -21,13 +22,11 @@ const Jobdetail = () => {
                 }
                 
         },[])
-//         
-         
-        
-         
-        
+const handleApplyed = (id) => {
+        addToDb(id)
+}
 
-        
+         
         return (
                 <div>  
                         <h1 className='text-3xl text-center mt-16'>Job Details : </h1>
@@ -56,7 +55,10 @@ const Jobdetail = () => {
                          <FontAwesomeIcon icon={faAddressBook } />
                           Address : Dhaka, Uttara</p> 
                          
-              <button className='bg-sky-400 w-3/5 px-auto py-1 absolute font-mono font-bold text-white mx-auto bottom-0 '>Apply Now</button>
+                   <Link to = "/appyed">
+                        
+              <button onClick={()=>handleApplyed(id)} className='bg-sky-400 w-3/5 px-auto py-1 absolute font-mono font-bold text-white mx-auto bottom-0 '>Apply Now</button>
+                   </Link>      
               </div>
         </div>
                 </div>
