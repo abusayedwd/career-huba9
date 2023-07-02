@@ -40,7 +40,7 @@ const Home = () => {
                                 }
                         </div>
                         <Jobfeature></Jobfeature>
-                        <div className='grid grid-cols-1  mx-auto md:grid-cols-2  mt-12 gap-4 '>
+                        <div className='grid grid-cols-1 mx-auto md:grid-cols-2  mt-12 gap-4'>
                        {
                              features.map(feature => 
                                 <Showjobfeature
