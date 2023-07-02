@@ -7,4 +7,4 @@
 # 5. Applyed job component and save localstorage
 # 6.PieChart component 
 
-# Live site: https://earnest-capybara-1c7963.netlify.app/
+# Live site:  
